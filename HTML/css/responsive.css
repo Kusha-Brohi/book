@@ -1,0 +1,184 @@
+@media only screen and (min-width: 1366px) and (max-width: 1920px) {}
+
+@media only screen and (min-width: 1200px) and (max-width: 1365px) {}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    section.banner h1.text-right {
+        font-size: 54px;
+    }
+    .award-wrp h4 {
+        font-size: 21px;
+    }
+    .about-side-cont {
+        padding: 54px 0px;
+    }
+    .product-slide div {
+        height: 224px;
+    }
+    .news-latr-form button.btn-1 {
+        padding: 0 13px;
+    }
+    .newslatte-sec h2 {
+        font-size: 30px;
+    }
+    .contact_info p {
+        font-size: 17px;
+    }
+    .contact_info a {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 520px) and (max-width: 767px) {
+    .banner-txt {
+        display: block;
+    }
+    .banner-img {
+        width: 100%;
+    }
+    section.banner h1.text-right {
+        text-align: center;
+        font-size: 57px;
+    }
+    section.banner h1 {
+        text-align: center;
+        font-size: 65px;
+    }
+    .award-wrp h3 {
+        font-size: 20px;
+    }
+    .award-wrp {
+        padding: 18px 0px;
+    }
+    .award-wrp h4 {
+        line-height: 1;
+        font-size: 29px;
+    }
+    .mobilecontainer {
+        background: none;
+    }
+    .mobilecontainer span {
+        color: #fff;
+    }
+    .about-side-img {
+        margin: 20px 0px;
+    }
+    .about-side-cont {
+        padding: 40px 0px;
+    }
+    .newslatte-sec h2 {
+        font-size: 28px;
+    }
+    .news-latr-form button.btn-1 {
+        padding: 0 11px;
+        font-size: 18px;
+    }
+    .news-latr-form input {
+        padding: 10px;
+    }
+    .menu-ftttr a {
+        font-size: 18px;
+    }
+    .social-links {
+        margin: 14px 0px;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 519px) {
+    .banner-txt {
+        display: block;
+    }
+    .banner-img {
+        width: 100%;
+    }
+    section.banner h1.text-right {
+        text-align: center;
+        font-size: 57px;
+    }
+    section.banner h1 {
+        text-align: center;
+        font-size: 65px;
+    }
+    .award-wrp h3 {
+        font-size: 20px;
+    }
+    .award-wrp {
+        padding: 18px 0px;
+    }
+    .award-wrp h4 {
+        line-height: 1;
+        font-size: 29px;
+    }
+    .mobilecontainer {
+        background: none;
+    }
+    .mobilecontainer span {
+        color: #fff;
+    }
+    .about-side-img {
+        margin: 20px 0px;
+    }
+    .about-side-cont {
+        padding: 40px 0px;
+    }
+    .newslatte-sec h2 {
+        font-size: 28px;
+    }
+    .news-latr-form button.btn-1 {
+        padding: 0 11px;
+        font-size: 18px;
+    }
+    .news-latr-form input {
+        padding: 10px;
+    }
+    .menu-ftttr a {
+        font-size: 18px;
+    }
+    .social-links {
+        margin: 14px 0px;
+    }
+    /* Book pages  */
+    section.banner.inner-banner.book-banner h1 {
+        text-align: center;
+        font-size: 91px;
+    }
+    section.banner.inner-banner.book-banner {
+        height: 30vh;
+    }
+    .book_image {
+        text-align: center;
+        margin: 10px 0px;
+    }
+    section.book-pg-sec {
+        padding: 20px 0px;
+    }
+    /* Book pages  */
+    section.banner.inner-banner.contact-bann h1 {
+        font-size: 87px;
+    }
+    section.banner.inner-banner.contact-bann.stories {
+        height: 30vh;
+    }
+    section.story-sec h2 {
+        font-size: 35px;
+    }
+    .story_heading h3 {
+        font-size: 27px;
+    }
+    .stroy_center_image h3 {
+        width: 100%;
+        font-size: 20px;
+        line-height: 1;
+    }
+    .story_image p {
+        width: 100%;
+    }
+    section.about {
+        padding: 20px 5px;
+    }
+    section.banner.inner-banner.contact-bann {
+        height: 30vh;
+    }
+}

@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102526491-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-102526491-3');
+    </script>
+
+    <meta charset="UTF-8" />
+    <title>ELEPHANT.MONEY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--<link href="img/logo/bdollar.png" rel="icon">-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <!--<meta name="theme-color" content="#ffffff">-->
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Nunito&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="font/iconsmind/style.css" />
+    <link rel="stylesheet" href="font/simple-line-icons/css/simple-line-icons.css" />
+
+    <!-- build:css css/index.css -->
+    <link rel="stylesheet" href="css/vendor/bootstrap-stars.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/vendor/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap-stars.css" />
+    <link rel="stylesheet" href="css/vendor/component-custom-switch.min.css" />
+    <link rel="stylesheet" href="css/vendor/video-js.css" />
+    <link rel="stylesheet" href="css/vendor/nouislider.min.css" />
+    <link rel="stylesheet" href="css/dore.dark.blue.css" />
+    <script src="https://kit.fontawesome.com/ee48b07ec9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- endbuild -->
+
+    <style>
+        .label-btn {
+            display: inline-block;
+            border: 1px solid #424242;
+            width: 28px;
+            height: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            line-height: 20px;
+        }
+        
+        .label-btn:hover {
+            color: #969696;
+        }
+        
+        .row-main-form {
+            margin-top: 55px;
+        }
+        
+        .form-control[readonly] {
+            border: 1px solid #424242;
+            background: #232223;
+            cursor: not-allowed;
+        }
+        
+        .numbers-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .number-wrap {
+            width: 160px;
+            height: 160px;
+            border: 1px solid #424242;
+            border-radius: 0.1rem;
+            margin-left: 5px;
+        }
+        
+        .number-wrap:first-child {
+            margin-left: 0;
+        }
+        
+        .luck-title-top {
+            /*font-family: 'Lobster', cursive;*/
+            font-size: 8rem !important;
+            color: whitesmoke;
+        }
+        
+        .luck-title {
+            /*font-family: 'Lobster', cursive;*/
+            font-size: 6.5rem !important;
+            color: whitesmoke;
+        }
+        
+        .jackpot-title {
+            font-family: 'Raleway Dots', cursive;
+            font-size: 4rem !important;
+            line-height: normal;
+            color: white;
+        }
+        
+        .number-wrap .digit {
+            font-size: 80px;
+            line-height: normal;
+            font-weight: 700;
+        }
+        
+        .number-wrap .digit-title {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        
+        .noUi-tooltip,
+        .noUi-handle {
+            cursor: pointer;
+        }
+        
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            /* display: none; <- Crashes Chrome on hover */
+            -webkit-appearance: none;
+            margin: 0;
+            /* <-- Apparently some margin are still there even though it's hidden */
+        }
+        
+        input[type=number] {
+            -moz-appearance: textfield;
+            /* Firefox */
+        }
+        
+        #rollBtn {
+            font-size: 1.4rem;
+            line-height: 1.0;
+        }
+        
+        .rolling-text {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                color: #ffffff;
+            }
+            100% {
+                color: #86367e;
+            }
+        }
+        
+        .price-top-part i.large-icon {
+            background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#145388));
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        
+        #topStatsContainer i.large-icon {
+            font-size: 40px;
+            line-height: 35px;
+        }
+        
+        #topStatsContainer .price-top-part>.text-large {
+            font-size: 22px !important;
+        }
+        
+        #jackpotContainer .price-top-part>.text-large {
+            font-size: 22px !important;
+        }
+        
+        a.text-primary {
+            color: #FFFFFF !important;
+        }
+        
+        a.text-primary:focus,
+        a.text-primary:hover {
+            color: #af67a4 !important;
+        }
+    </style>
+    <style>
+        .label-btn {
+            display: inline-block;
+            border: 1px solid #424242;
+            width: 28px;
+            height: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            line-height: 20px;
+        }
+        
+        .label-btn:hover {
+            color: #969696;
+        }
+        
+        .row-main-form {
+            margin-top: 55px;
+        }
+        
+        .form-control[readonly] {
+            border: 1px solid #424242;
+            background: #232223;
+            cursor: not-allowed;
+        }
+        
+        .numbers-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .number-wrap {
+            width: 160px;
+            height: 160px;
+            border: 1px solid #424242;
+            border-radius: 0.1rem;
+            margin-left: 5px;
+        }
+        
+        .number-wrap:first-child {
+            margin-left: 0;
+        }
+        
+        .luck-title {
+            /*font-family: 'Lobster', cursive;*/
+            font-size: 8rem !important;
+            color: whitesmoke;
+        }
+        
+        .jackpot-title {
+            font-family: 'Raleway Dots', cursive;
+            font-size: 4rem !important;
+            line-height: normal;
+            color: white;
+        }
+        
+        .number-wrap .digit {
+            font-size: 80px;
+            line-height: normal;
+            font-weight: 700;
+        }
+        
+        .number-wrap .digit-title {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        
+        .noUi-tooltip,
+        .noUi-handle {
+            cursor: pointer;
+        }
+        
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            /* display: none; <- Crashes Chrome on hover */
+            -webkit-appearance: none;
+            margin: 0;
+            /* <-- Apparently some margin are still there even though it's hidden */
+        }
+        
+        input[type=number] {
+            -moz-appearance: textfield;
+            /* Firefox */
+        }
+        
+        #rollBtn {
+            font-size: 1.4rem;
+            line-height: 1.0;
+        }
+        
+        .rolling-text {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                color: #ffffff;
+            }
+            100% {
+                color: #86367e;
+            }
+        }
+        
+        #topStatsContainer i {
+            background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#145388));
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        
+        #topStatsContainer i.large-icon {
+            font-size: 40px;
+            line-height: 35px;
+        }
+        
+        #topStatsContainer .price-top-part>.text-large {
+            font-size: 22px !important;
+        }
+        
+        #jackpotContainer .price-top-part>.text-large {
+            font-size: 22px !important;
+        }
+        
+        .nav-tabs .nav-item.show .nav-link:before,
+        .nav-tabs .nav-link.active:before {
+            background-color: #1dbf73;
+        }
+        
+        .card {
+            background-color: #fff;
+        }
+        
+        .nav-tabs .nav-item.show .nav-link,
+        .nav-tabs .nav-link.active {
+            color: #fff;
+        }
+        
+        .nav-tabs .nav-item.show .nav-link,
+        .nav-tabs .nav-link.active {
+            background: #eabc4e;
+        }
+        
+        .bootstrap-tagsinput,
+        .form-control {
+            background-color: transparent;
+            border-radius: 50px;
+        }
+        
+        .form-control:focus {
+            background-color: transparent;
+            border-color: unset;
+        }
+        
+        .landing-page .btn-outline-semi-light:active,
+        .landing-page .btn-outline-semi-light:hover {
+            border: 1px solid #eabc4e;
+            background: #eabc4e;
+            color: #fff !important;
+        }
+        
+        .custom-switch .custom-switch-input+.custom-switch-btn {
+            background-color: transparent;
+        }
+        
+        .custom-switch.custom-switch-primary-inverse .custom-switch-input:checked+.custom-switch-btn {
+            border-color: #1dbf73;
+            background-color: #eabc4e;
+        }
+        
+        .custom-switch.custom-switch-primary-inverse .custom-switch-input:checked+.custom-switch-btn:after {
+            background-color: #1dbf73;
+        }
+        
+        .landing-page p,
+        p {
+            color: #000;
+        }
+        
+        .white {
+            color: #000 !important;
+        }
+        
+        .landing-page .home-text p {
+            color: #000;
+        }
+        
+        .btn-outline-primary {
+            border-color: #1dbf73;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: #eabc4e;
+            color: #fff !important;
+            border-color: #eabc4e;
+        }
+        
+        .landing-page .home-row {
+            padding: 0;
+        }
+        
+        .text-white-50 {
+            padding: 5px 0px;
+            color: #000 !important;
+        }
+        
+        #topStatsContainer i {
+            background: #1dbf73;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: #fff;
+            padding: 8px;
+            border-radius: 100%;
+        }
+        
+        .landing-page i.large-icon {
+            background: #1dbf73;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: #fff;
+            padding: 13px;
+            border-radius: 100%;
+            height: 100px;
+            width: 100px;
+            font-size: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px auto;
+        }
+        
+        .color-theme-1 {
+            color: #000;
+        }
+        /*Mini Guide*/
+        
+        .mini-guide-text {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .mini-guide-text h2 {
+            font-size: 52px;
+            color: var(--main-txt-color1);
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .mini-guide-text p {
+            padding: 10px 346px;
+            color: var(--main-txt-color);
+        }
+        /*mini guides ider*/
+        
+        .mini-guide-sider h2 {
+            font-size: 52.28px;
+            text-transform: uppercase;
+            color: #f6bc54;
+            font-weight: 700;
+            margin-bottom: 42px;
+        }
+        
+        .mini-guide-sider {
+            text-align: center;
+        }
+        
+        .mini-guide-sider p {
+            font-size: 30.17px;
+            line-height: 55px;
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 100px;
+            color: var(--main-txt-color);
+        }
+        
+        .about-section {
+            margin-top: -159px;
+        }
+        
+        .slick-prev,
+        .slick-next {
+            top: 100%;
+        }
+        
+        .slick-next {
+            right: 48%;
+        }
+        
+        .slick-prev {
+            left: 45%;
+        }
+        
+        .slick-prev:before {
+            content: "\f104";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: white;
+        }
+        
+        .slick-next:before {
+            content: "\f105";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: white;
+        }
+        
+        button.slick-prev.slick-arrow {
+            background: #1dbf73;
+            width: 37px;
+            height: 37px;
+            border-radius: 50%;
+        }
+        
+        button.slick-next.slick-arrow {
+            background: #1dbf73;
+            width: 37px;
+            height: 37px;
+            border-radius: 50%;
+        }
+        
+        section.fotter-sec.inner {
+            padding: 80px 0;
+        }
+        /*mini guides ider*/
+        /*Mini Guide*/
+    </style>
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '445487697192792');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=445487697192792&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+
+<body class="show-spinner">
+    <div class="landing-page">
+        <div class="mobile-menu">
+            <ul id="site-menu" class="navbar-nav">
+            </ul>
+        </div>
+
+        <div class="main-container">
+            <!-- <nav class="landing-page-nav">
+            <div class="container d-flex align-items-center justify-content-between">
+
+                <a class="pull-left" href="/">
+                    <image width="64px" class="mr-2" src="/android-chrome-192x192.png"/><span class="text-white">ELEPHANT.MONEY</span>
+                </a>
+
+                <a href="#" class="d-lg-flex mobile-menu-button">
+                    <i class="simple-icon-menu"></i>
+                </a>
+            </div>
+        </nav> -->
+            <header>
+                <div class="menuSec">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-5 col-lg-3 col-xl-3">
+                                <div class="logo-box">
+                                    <a href="index.html">
+                                        <img src="img/logo.png" alt="img" />
+                                        <h3>ELEPHANT.MONEY</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 col-lg-2 col-xl-4">
+                                <ul class="socali-link">
+                                    <li><a href="https://twitter.com/ElephantStatus"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://t.me/elephant_money"><i class="fas fa-telegram"></i></a></li>
+                                    <li><a href="https://linktr.ee/elephant_money"><i class="fas fa-link"></i></a></li>
+                                    <li><a href="https://certik.org/projects/elephant"><i class="fas fa-certificate"></i></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCBHcyR7ixP70R6hhpck1qUQ"><i class="fas fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="col-1 col-md-1 col-lg-1 col-xl-2">
+                                <span onclick="openNav()"><i class="fas fa-bars"></i></span>
+
+                                <div id="mySidenav" class="sidenav">
+                                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                    <div id="google_translate_element"></div>
+                                    <script>
+                                        function googleTranslateElementInit() {
+                                            new google.translate.TranslateElement({
+                                                    pageLanguage: 'en'
+                                                },
+                                                'google_translate_element'
+                                            );
+                                        }
+                                    </script>
+                                    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                                    <a href="index.html">HOME</a>
+                                    <a href="#">ELEPHANT</a>
+                                    <a href="trunk.html">TRUNK / STAMPEDE</a>
+                                    <a href="retired.html">RETIRED</a>
+                                    <a href="#">AUDITS</a>
+                                    <a href="#">SOLIDITY FINANCE</a>
+                                    <a href="#">CERTIK</a>
+                                    <a href="#">WHITE PAPER</a>
+                                    <a href="#">BSC GUIDE</a>
+                                </div>
+                            </div>
+                            <div class="col-5 col-md-3 col-lg-3 col-xl-3">
+                                <button type="button" id="main" class="btn-click">
+                     <span onclick="myFunction_set()" id="dark"></span>
+                     <span onclick="myFunction_set1()" id="white"></span>
+                   </button>
+
+
+
+                                <!-- <button type="button" id="white" onclick="myFunction_set1()"> <span> White</span></button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- ele-sec -->
+            <section class="ele-sec">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h3>Elephant.Money</h3>
+                            <h2>A VOLUNTARY, SUSTAINABLE, <span>AND PERMISSIONLESS</span></h2>
+                            <h4>GLOBAL ECONOMIC <span>ENGINE</span></h4>
+                            <p>ELEPHANT.MONEY implements a voluntary, sustainable, and permissionless global economic engine on top of a collection of blue chip assets, a core rewards token (ELEPHANT), and a stable coin (TRUNK). The ELEPHANT.MONEY protocol
+                                is a 100% complete and finished product and provides yield and price appreciation in any market cycle.</p>
+                            <ul>
+                                <li><a href="https://t.me/elephant_money"> Join Us On <span>TELEGRAM</span> </a></li>
+                                <li><a href="https://linktr.ee/elephant_money"> Visit Our <span>LINKTREE  </span> </a></li>
+                                <li><a href="https://certik.org/projects/elephant">View us on <span>CERTIK</span> </a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="img/eleplent-img.png" alt="images" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ele-sec -->
+            <div class="content-container" id="home">
+                <div class="section home">
+                    <div class="container pt-5">
+                        <div class="row pt-5 mt-4 mb-4">
+                            <div class="container col-12 text-center">
+                                <!--<h1 class="text-white-50">Stats</h1>-->
+                                <h2 class="text-white-50">
+                                    <!--HODL and GROW your crypto PROFITS!-->&nbsp;
+                                </h2>
+                            </div>
+
+                            <!--<div class="container col-12 col-xl-3 col-lg-3 col-md-3 text-center">
+                            <div class="price-top-part">
+                                <i class="iconsmind-MaleFemale large-icon"></i>
+                                <h5 class="mb-0 font-weight-semibold text-white-50 mb-4">Players</h5>
+                                <p class="text-large mb-2 text-white"><span class="notranslate" id="getTotalMembers">...</span></p>
+                                <p class="text-small text-white-50">Unique Impressions</p>
+                            </div
+                        </div>-->
+                            <div class="container col-12 col-xl-3 col-lg-3 col-md-3 text-center">
+                                <div class="price-top-part">
+                                    <div class="money_icon">
+                                        <i class="fas fa-coins"></i>
+                                    </div>
+                                    <h5 class="mb-0 m_1 font-weight-semibold text-white-50 mb-4">TVL</h5>
+                                    <p class="text-large mb-2 text-white"><span class="notranslate" id="contractBalance">...</span></p>
+                                    <p class="text-small m_1 text-white-50">USD</p>
+                                </div>
+                            </div>
+
+                            <!--<div class="container col-6 col-xl-3 col-lg-3 col-md-3 text-center">
+                            <div class="price-top-part">
+                                <i class="iconsmind-Financial large-icon"></i>
+                                <h5 class="mb-0 font-weight-semibold text-white-50 mb-4">APY</h5>
+                                <p class="text-large mb-2 text-white"><span class="notranslate" id="apy">...</span></p>
+                                <p class="text-small text-white-50">Yield</p>
+                            </div>
+                        </div>-->
+
+
+                            <!--<div class="container col-12 col-xl-3 col-lg-3 col-md-3 text-center">
+                            <div class="price-top-part">
+                                <i class="iconsmind-Sync large-icon"></i>
+                                <h5 class="mb-0 font-weight-semibold text-white-50 mb-4">Transactions</h5>
+                                <p class="text-large mb-2 text-white"><span class="notranslate" id="totalTxs">...</span></p>
+                                <p class="text-small text-white-50">Txs</p>
+                            </div>
+                        </div>-->
+
+                        </div>
+
+
+                        <div class="row mb-4">
+
+                            <div class="container col-6">
+                                <!--col-xl-4 col-lg-4 col-md-4 mb-4-->
+                                <div class="home-text text-center row mb-2 mt-4">
+                                    <div class="col-12 text-center">
+                                        <div class="mb-4 text-center notranslate p-1"><img height="120px" src="img/logo/elephant.png" /></div>
+                                        <p class="text-white-50 m_1">ELEPHANT</p>
+                                        <p class="mb-4 m_2 text-white"><span class="notranslate">Easiest way to buy</span></p>
+                                        <p class="mb-4 text-white-50"><span class="notranslate m_1" id="marketcap">...</span></p>
+                                        <p class="luck-title-top  mb-2 text-center"><a href="/dashboard.html" class="btn money_btn btn-outline-white text-white mb-4">GO</a></p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container col-6">
+                                <div class="home-text text-center row mb-2 mt-4">
+                                    <div class="col-12 text-center">
+                                        <div class="mb-4 text-center notranslate p-1"><img height="120px" src="img/logo/trunk-logo.png" /></div>
+                                        <p class="text-white-50 m_1">TRUNK / STAMPEDE</p>
+                                        <p class="mb-4 m_2 text-white"><span class="notranslate " id="trunk-apy">...</span> - 205% APR</p>
+                                        <p class="mb-4 text-white-50"><span class="notranslate m_1" id="trunk-tvl">...</span></p>
+                                        <p class="luck-title-top  mb-2 text-center"><a href="/trunk.html" class="btn money_btn green btn-outline-white text-white mb-4">GO</a></p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="container col-12 mb-4 pt-4">
+
+                                <h2 class="text-white-50 text-center">Elephant Money</h2>
+                                <p class="text-white">ELEPHANT.MONEY implements a voluntary, sustainable, and permissionless global economic engine on top of a collection of blue chip assets, a core rewards token (ELEPHANT), and a stable coin (TRUNK). The ELEPHANT.MONEY protocol
+                                    is a 100% complete and finished product and provides yield and price appreciation in any market cycle.</p>
+                                </p>
+                            </div> -->
+
+                            <!-- reserve -->
+                            <section class="reserve-sec">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h2>Elephant Money</h2>
+                                            <p>ELEPHANT.MONEY implements a voluntary, sustainable, and permissionless global economic engine on top of a collection of blue chip assets, a core rewards token (ELEPHANT), and a stable coin (TRUNK). The ELEPHANT.MONEY
+                                                protocol is a 100% complete and finished product and provides yield and price appreciation in any market cycle.</p>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <h2 class="text-white-50 mb-2">Reserve</h2>
+                                            <div class="card mb-4">
+                                                <div class="card-header">
+                                                    <ul class="nav nav-tabs card-header-tabs " role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" id="mint-tab" data-toggle="tab" href="#mintContent" role="tab" aria-controls="mintContent" aria-selected="true">MINT</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="redeem-tab" data-toggle="tab" href="#redeemContent" role="tab" aria-controls="redeemContent" aria-selected="true">REDEEM</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="sweep-tab" data-toggle="tab" href="#sweepContent" role="tab" aria-controls="sweepContent" aria-selected="true">REWARDS</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane fade show active" id="mintContent" role="tabpanel" aria-labelledby="mint-tab">
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <div class="row">
+                                                                        <div class="col-6 text-left">
+                                                                            <label for="mintAmount">Amount</label>
+                                                                        </div>
+                                                                        <div class="col-6 text-right">
+                                                                            BUSD <label class="busd-balance text-white">...</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="number" class="form-control" id="mintAmount" aria-describedby="buyTrxHelp" placeholder="BUSD">
+                                                                    <small class="form-text text-muted"><span class="notranslate" id="mint-estimate"></span>
+                                                    </small>
+                                                                </div>
+                                                                <p class="text-left">
+                                                                    <a class="btn btn-outline-semi-light default mb-0" onclick="mint();">MINT</a>
+                                                                </p>
+
+                                                                <div class="custom-switch custom-switch-primary-inverse">
+                                                                    <input class="custom-switch-input" id="mintChb" type="checkbox" />
+                                                                    <label class="custom-switch-btn align-middle mt-0" for="mintChb"></label>
+                                                                    <small class="form-text d-inline-block align-middle text-muted p-0 m-0 ml-2">
+                                                        <span id="mint-status">...</span>
+                                                    </small>
+                                                                </div>
+
+                                                            </form>
+                                                        </div>
+                                                        <div class="tab-pane fade show" id="redeemContent" role="tabpanel" aria-labelledby="redeem-tab">
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <div class="row">
+                                                                        <div class="col-6 text-left">
+                                                                            <label for="redeemAmount">Amount</label>
+                                                                        </div>
+                                                                        <div class="col-6 text-right">
+                                                                            TRUNK <label class="trunk-balance text-white">...</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="number" class="form-control asset-input" id="redeemAmount" aria-describedby="redeemTrxHelp" placeholder="">
+                                                                    <small class="form-text text-muted"><span class="notranslate" id="redeem-estimate"></span>
+                                                    </small>
+                                                                </div>
+                                                                <p class="text-left">
+                                                                    <a class="btn btn-outline-semi-light default mb-0" onclick="redeem();">REDEEM</a>
+                                                                </p>
+
+                                                                <div class="custom-switch custom-switch-primary-inverse">
+                                                                    <input class="custom-switch-input" id="redeemChb" type="checkbox" />
+                                                                    <label class="custom-switch-btn align-middle mt-0" for="redeemChb"></label>
+                                                                    <small class="form-text d-inline-block align-middle text-muted p-0 m-0 ml-2">
+                                                        <span id="redeem-status">...</span>
+                                                    </small>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="tab-pane fade show" id="sweepContent" role="tabpanel" aria-labelledby="sweep-tab">
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <p>Community Reward Pools</p>
+                                                                    <div class="row">
+                                                                        <div class="col-6 text-left">
+                                                                            <label>TRUNK Staking</label>
+                                                                            <p class="text-white"><span class="rewardpool-balance">...</span> / <span id="rewardpool-available">...</span></p>
+                                                                            <p class="text-muted text-small"><span>Total /  Available (USD)</span></p>
+                                                                        </div>
+                                                                        <!--<div class="col-6 text-left">
+                                                            <label>v2 Staking</label>
+                                                            <p class="text-white"><span class="secondarypool-balance">...</span> / <span id="secondarypool-available">...</span></p>
+                                                            <p class="text-muted text-small"><span>Total /  Available (USD)</span></p>
+                                                        </div>-->
+                                                                        <div class="col-6 text-left">
+                                                                            <label>Performance</label>
+                                                                            <p class="text-white"><span class="performance-balance">...</span> / <span class="performance-available">...</span></p>
+                                                                            <p class="text-muted text-small"><span>Total /  Available (USD)</span></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <p>Distribute Pool Rewards</p>
+                                                                    <div class="row">
+                                                                        <div class="col-12 text-left">
+                                                                            <a class="btn btn-outline-semi-light default mb-0 mr-2 mb-2" onclick="sweepTRUNK();">TRUNK</a>
+                                                                            <!--<a class="btn btn-outline-semi-light default mb-0 mr-2 mb-2"
+                                                            onclick="sweepPools();">POOLS</a>-->
+                                                                            <a class="btn btn-outline-semi-light default mb-0 mb-2" onclick="sweepPerformance();">PERFORMANCE</a>
+                                                                        </div>
+                                                                        <div class="col-12 text-right mt-2">
+                                                                            <small>*community powered distribution</small>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <!--- STAKE --->
+                                            <h2 class="text-white-50 mb-4">Stake</h2>
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <ul class="nav nav-tabs card-header-tabs " role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" id="deposit-tab" data-toggle="tab" href="#depositContent" role="tab" aria-controls="depositContent" aria-selected="true">DEPOSIT</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="withdraw-tab" data-toggle="tab" href="#withdrawContent" role="tab" aria-controls="withdrawContent" aria-selected="true">WITHDRAW</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="transfer-tab" data-toggle="tab" href="#transferContent" role="tab" aria-controls="transferContent" aria-selected="true">TRANSFER</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="transfer-tab" data-toggle="tab" href="#airdropContent" role="tab" aria-controls="airdropContent" aria-selected="true">AIRDROP</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane fade show active" id="depositContent" role="tabpanel" aria-labelledby="deposit-tab">
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <div class="row">
+                                                                        <div class="col-6 text-left">
+                                                                            <label for="buyAmount">Amount</label>
+                                                                        </div>
+                                                                        <div class="col-6 text-right">
+                                                                            TRUNK <label class="trunk-balance text-white">...</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="number" class="form-control asset-input" id="buyAmount" aria-describedby="buyTrxHelp" placeholder="">
+                                                                    <small class="form-text text-muted"><span class="notranslate" id="buy-estimate"></span></small>
+                                                                    <!--<small  class="form-text text-muted">Deposited <span class="asset-symbol">...</span>: <span class="notranslate" id="buy-estimate"></span>
+                                                </small>-->
+                                                                </div>
+                                                                <p class="text-left">
+                                                                    <a class="btn btn-outline-semi-light default mb-0" id="buyTrx" onclick="buy();">DEPOSIT</a>
+                                                                </p>
+
+                                                                <div class="custom-switch custom-switch-primary-inverse">
+                                                                    <input class="custom-switch-input" id="stakingChb" type="checkbox" />
+                                                                    <label class="custom-switch-btn align-middle mt-0" for="stakingChb"></label>
+                                                                    <small class="form-text d-inline-block align-middle text-muted p-0 m-0 ml-2">
+                                                    <span id="staking-status">...</span>
+                                                </small>
+                                                                </div>
+
+                                                            </form>
+                                                        </div>
+                                                        <div class="tab-pane fade show" id="withdrawContent" role="tabpanel" aria-labelledby="withdraw-tab">
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <div class="row">
+                                                                        <div class="col-6 text-left">
+                                                                            <label for="sellAmount">Amount</label>
+                                                                        </div>
+                                                                        <div class="col-6 text-right">
+                                                                            TRUNK <label class="user-bonus text-white">...</label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <input type="number" class="form-control" id="sellAmount" aria-describedby="sellTrxHelp" placeholder="TRUNK">
+                                                                    <small class="form-text text-muted"><span class="notranslate" id="sell-estimate"></span></small>
+                                                                    <!--<small id="sellTrx" class="form-text text-muted">Withdrawn <span class="asset-symbol">...</span>: <span class="notranslate" id="sell-estimate"></span>
+                                                </small>-->
+                                                                </div>
+                                                                <p class="text-left">
+                                                                    <a class="btn btn-outline-semi-light default mb-0" onclick="sell();">WITHDRAW</a>
+                                                                </p>
+                                                            </form>
+                                                        </div>
+
+                                                        <div class="tab-pane fade show" id="transferContent" role="tabpanel" aria-labelledby="transfer-tab">
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="recipient">Recipient</label>
+                                                                    <input class="form-control" id="recipient" aria-describedby="transTrxHelp" placeholder="Address">
+                                                                    <!-- a href="javascript:void(0);" id="selectRandRefBtn" class="mb-0 notranslate float-right" onclick="selectRandomReferral();"><small>Select Random Referral</small></a>-->
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="row">
+                                                                        <div class="col-6 text-left">
+                                                                            <label for="buyAmount">Amount</label>
+                                                                        </div>
+                                                                        <div class="col-6 text-right">
+                                                                            TRUNK <label class="user-bonus text-white">...</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="number" class="form-control" id="transferAmount" aria-describedby="transTrxHelp" placeholder="">
+                                                                    <small class="form-text text-muted"><span class="notranslate" id="transfer-estimate"></span>
+                                                       </small>
+                                                                </div>
+                                                                <p class="text-left">
+                                                                    <a class="btn btn-outline-semi-light default mb-0" id="transTrx" onclick="transfer();">TRANSFER</a>
+                                                                </p>
+                                                            </form>
+                                                        </div>
+
+                                                        <div class="tab-pane fade show" id="airdropContent" role="tabpanel" aria-labelledby="airdrop-tab">
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <div class="row">
+                                                                        <div class="col-6 text-left">
+                                                                            <label for="airdropAmount">Amount</label>
+                                                                        </div>
+                                                                        <div class="col-6 text-right">
+                                                                            TRUNK <label class="trunk-balance text-white">...</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="number" class="form-control asset-input" id="airdropAmount" aria-describedby="buyTrxHelp" placeholder="">
+                                                                    <small class="form-text text-muted"><span class="notranslate" id="airdrop-estimate"></span></small>
+
+                                                                </div>
+                                                                <p class="text-left">
+                                                                    <a class="btn btn-outline-semi-light default mb-0" onclick="airdrop();">AIRDROP</a>
+                                                                </p>
+
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- reserve -->
+
+
+                            <!--<div  class="container col-12 col-xl-6 col-lg-6 col-md-6 mb-4 pt-4">
+                            <div class="home-text text-center row mb-2 mt-4">
+                                <div class="col-12 text-center">
+                                    <p class="luck-title  pb-4 mb-4 text-center"><a href="/vlt.html" class="text-primary notranslate">Vlt</a></p>
+                                    <h3 class="text-white-50 mt-5">Start here for ETH... </h3>
+                                </div>
+                            </div>
+                        </div>-->
+
+                        </div>
+
+                    </div>
+
+                    <!-- <div class="section mt-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12  text-center">
+                                    <a id="faq"></a>
+                                    <h2 class="text-white-50">Benefits</h2>
+                                    <p>
+                                        ELEPHANT.MONEY is a permissionless system for economic inclusion and helps its community accumulate wealth through active and passive cash flows.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 p-0">
+                                    <div class="owl-container">
+                                        <div class="owl-carousel home-carousel">
+                                            <div class="card">
+                                                <div class="card-body text-center">
+                                                    <div>
+                                                        <i class="iconsmind-Gamepad-2 large-icon"></i>
+                                                        <h5 class="mb-0 font-weight-semibold">
+                                                            Stable Decentralized Finance
+                                                        </h5>
+                                                    </div>
+                                                    <div>
+                                                        <p class="detail-text">
+                                                            ELEPHANT.MONEY is a great way to earn value long term with TRUNK, ELEPHANT, ETH, and BTC. Elephant Money is unstoppable and onchain!
+                                                        </p>
+                                                    </div>
+                                                    <p>&nbsp;</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="card">
+                                                <div class="card-body text-center">
+                                                    <div>
+                                                        <i class="iconsmind-Farmer large-icon"></i>
+                                                        <h5 class="mb-0 font-weight-semibold">
+                                                            Sustainable Yield
+                                                        </h5>
+                                                    </div>
+                                                    <div>
+                                                        <p class="detail-text">
+                                                            On ELEPHANT.MONEY you can participate in yield and value generation that is generated 100% by community activity.
+                                                        </p>
+                                                    </div>
+                                                    <p>&nbsp;</p>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="card">
+                                                <div class="card-body text-center">
+                                                    <div>
+                                                        <i class="iconsmind-Laptop-Phone large-icon"></i>
+                                                        <h5 class="mb-0 font-weight-semibold">
+                                                            Sleek and Responsive
+                                                        </h5>
+                                                    </div>
+                                                    <div>
+                                                        <p class="detail-text">
+                                                            ELEPHANT.MONEY is designed to work well on both desktop and mobile. A sleek dark theme keeps you in the zone, WINNING
+                                                        </p>
+                                                    </div>
+                                                    <p>&nbsp;</p>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-body text-center">
+                                                    <div>
+                                                        <i class="iconsmind-Gentleman large-icon"></i>
+                                                        <h5 class="mb-0 font-weight-semibold">
+                                                            A Bankteller Production
+                                                        </h5>
+                                                    </div>
+                                                    <div>
+                                                        <p class="detail-text">
+                                                            Play to win and sleep well at night. As always, built with love.
+                                                        </p>
+                                                    </div>
+                                                    <p>&nbsp;</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider-nav text-center mb-5">
+                                            <a class="left-arrow owl-prev">
+                                                <i class="simple-icon-arrow-left"></i>
+                                            </a>
+                                            <div class="slider-dot-container"></div>
+                                            <a class="right-arrow owl-next">
+                                                <i class="simple-icon-arrow-right"></i>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Benefits -->
+                    <section class="benfi-sec">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h2>Benefits</h2>
+                                    <p class="cutom-p">ELEPHANT.MONEY is a permissionless system for economic inclusion and helps its community accumulate wealth through active and passive cash flows.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h3>Sustainable Yield</h3>
+                                    <p>On ELEPHANT.MONEY you can participate in yield and value generation that is generated 100% by community activity</p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h3>Sleek & Responsive</h3>
+                                    <p>ELEPHANT.MONEY is designed to work well on both desktop and mobile. A sleek dark theme keeps you in the zone, WINNING</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h3>A Bankteller <span>Production</span></h3>
+                                    <p>Play to win and sleep well at night. As always, built with love.</p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h3>Stable Decentralized <span>Finance</span></h3>
+                                    <p>ELEPHANT.MONEY is a great way to earn value long term with TRUNK, ELEPHANT, ETH, and BTC. Elephant Money is unstoppable and onchain!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Benefits -->
+
+                    <!-- everthing -->
+                    <section class="everthi-sec">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h2>Get In The Know Of Everything <span>Elephant Money </span></h2>
+                                    <div class="row">
+                                        <div class="col-md-12 col-lg-4">
+                                            <ul>
+                                                <li><img src="images/evernthngo-img.png" alt="images"></li>
+                                                <li>
+                                                    <h5>Get aboard the future-proof <span>economic engine</span> </h5>
+                                                    <h6>BSC ONBOARDING GUIDE</h6>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-12 col-lg-4">
+                                            <ul>
+                                                <li><img src="images/evernthngo-img.png" alt="images"></li>
+                                                <li>
+                                                    <h5>Dive right into the Smart <span>Contract Audit Report</span></h5>
+                                                    <h6>SOLIDITY FINANCE</h6>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-12 col-lg-4">
+                                            <ul>
+                                                <li><img src="images/evernthngo-img.png" alt="images"></li>
+                                                <li>
+                                                    <h5>Stay current with all the news <span>& updates regarding Elephant Money</span></h5>
+                                                    <h6>MEDIUM</h6>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- everthing -->
+
+                    <section class="road-map-sec">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h2>road map</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cd-horizontal-timeline">
+                            <div class="timeline">
+                                <div class="events-wrapper">
+                                    <div class="events">
+                                        <ol>
+                                            <li><a href="#0" data-date="16/01/2014" class="selected">16 Jan</a></li>
+                                            <li><a href="#0" data-date="28/02/2014">28 Feb</a></li>
+                                            <li><a href="#0" data-date="20/04/2014">20 Mar</a></li>
+                                            <li><a href="#0" data-date="20/05/2014">20 May</a></li>
+                                            <li><a href="#0" data-date="09/07/2014">09 Jul</a></li>
+                                            <li><a href="#0" data-date="30/08/2014">30 Aug</a></li>
+                                            <li><a href="#0" data-date="15/09/2014">15 Sep</a></li>
+                                            <li><a href="#0" data-date="01/11/2014">01 Nov</a></li>
+                                            <li><a href="#0" data-date="10/12/2014">10 Dec</a></li>
+                                            <li><a href="#0" data-date="19/01/2015">29 Jan</a></li>
+                                            <li><a href="#0" data-date="03/03/2015">3 Mar</a></li>
+                                        </ol>
+
+                                        <span class="filling-line" aria-hidden="true"></span>
+                                    </div>
+                                    <!-- .events -->
+                                </div>
+                                <!-- .events-wrapper -->
+
+                                <ul class="cd-timeline-navigation">
+                                    <li><a href="#0" class="prev inactive">Prev</a></li>
+                                    <li><a href="#0" class="next">Next</a></li>
+                                </ul>
+                                <!-- .cd-timeline-navigation -->
+                            </div>
+                            <!-- .timeline -->
+
+                            <div class="events-content">
+                                <ol>
+                                    <li class="selected" data-date="16/01/2014">
+                                        <em>MAY TO JUNE, 2021</em>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                        </p>
+                                    </li>
+
+                                    <li data-date="28/02/2014">
+                                        <em>MAY TO JUNE, 2021</em>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                        </p>
+                                    </li>
+
+                                    <li data-date="20/04/2014">
+                                        <em>MAY TO JUNE, 2021</em>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                        </p>
+                                    </li>
+
+                                    <li data-date="20/05/2014">
+                                        <em>MAY TO JUNE, 2021</em>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                        </p>
+                                    </li>
+
+                                    <li data-date="09/07/2014">
+                                        <em>MAY TO JUNE, 2021</em>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                        </p>
+                                    </li>
+
+                                    <li data-date="30/08/2014">
+                                        <em>MAY TO JUNE, 2021</em>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                        </p>
+                                    </li>
+
+                                    <li data-date="15/09/2014">
+                                        <em>MAY TO JUNE, 2021</em>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                        </p>
+                                    </li>
+
+                                    <li data-date="01/11/2014">
+                                        <em>MAY TO JUNE, 2021</em>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                        </p>
+                                    </li>
+
+                                    <li data-date="10/12/2014">
+                                        <em>MAY TO JUNE, 2021</em>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                        </p>
+                                    </li>
+
+                                    <li data-date="19/01/2015">
+                                        <em>MAY TO JUNE, 2021</em>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                        </p>
+                                    </li>
+
+                                    <li data-date="03/03/2015">
+                                        <em>MAY TO JUNE, 2021</em>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                        </p>
+                                    </li>
+                                </ol>
+                            </div>
+                            <!-- .events-content -->
+                        </div>
+                    </section>
+
+
+                    <!-- fotter -->
+                    <section class="fotter-sec">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3 col-lg-4"></div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="logo-box">
+                                        <a href="index.html" style="margin: 0 17%;">
+                                            <img src="images/logo.png" alt="img" />
+                                            <h3>ELEPHANT.MONEY</h3>
+                                        </a>
+                                    </div>
+                                    <ul class="socali-link" style="    margin: 0 33%;">
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-paper-plane"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-book"></i></a></li>
+                                    </ul>
+                                    <p style="text-align: center;">2022 © ELEPHANT.MONEY</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                    <!-- fotter -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const COLLATERAL_SYMBOL = "bdollar"
+    </script>
+    <script type="text/javascript">
+        let noload = true
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '158217479615099');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=158217479615099&ev=PageView&noscript=1"
+  /></noscript>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "350px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <!-- End Facebook Pixel Code -->
+    <!--<script src="js/vendor/web3.min.js"></script>-->
+    <!-- build:js js/index.js -->
+    <script src="js/vendor/tools.js"></script>
+    <script src="js/vendor/lodash-4.17.10.min.js"></script>
+    <script src="js/vendor/axios.min.js"></script>
+    <script src="js/vendor/tronweb.js"></script>
+    <script src="js/vendor/trongrid.js"></script>
+    <script src="js/vendor/numeral/numeral.min.js"></script>
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/vendor/owl.carousel.min.js"></script>
+    <script src="js/vendor/landing-page/headroom.min.js"></script>
+    <script src="js/vendor/landing-page/jQuery.headroom.js"></script>
+    <script src="js/vendor/nouislider.min.js"></script>
+    <script src="js/vendor/landing-page/jquery.scrollTo.min.js"></script>
+    <script src="js/vendor/landing-page/jquery.autoellipsis.js"></script>
+    <script src="js/vendor/jquery.color.min.js"></script>
+    <script src="js/vendor/jquery.easing.min.js"></script>
+    <script src="js/vendor/loadingoverlay.js"></script>
+    <script src="js/vendor/nouislider.min.js"></script>
+    <script src="js/vendor/bootstrap-notify.min.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/scripts.single.theme.js"></script>
+    <script src="js/vendor/jquery.animateNumber.min.js"></script>
+    <script src="js/vendor/moment.min.js"></script>
+    <script src="js/vendor/jquery.countdown.min.js"></script>
+    <script src="js/vendor/Chart.bundle.min.js"></script>
+    <script src="js/vendor/chartjs-plugin-datalabels.js"></script>
+    <script src="js/translate.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/abi-trunk.js"></script>
+    <!-- endbuild -->
+
+
+    <script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+    <!-- build:js js/home.bundle.js -->
+    <script src="js/abi.js"></script>
+    <script src="js/eth-common.js"></script>
+    <script src="js/landing.js"></script>
+    <script src="js/custom.js"></script>
+
+    <!-- endbuild -->
+    <!--<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
+
+
+    <script>
+        // timeline js
+        jQuery(document).ready(function($) {
+            var timelines = $('.cd-horizontal-timeline'),
+                eventsMinDistance = 60;
+
+            (timelines.length > 0) && initTimeline(timelines);
+
+            function initTimeline(timelines) {
+                timelines.each(function() {
+                    var timeline = $(this),
+                        timelineComponents = {};
+                    //cache timeline components
+                    timelineComponents['timelineWrapper'] = timeline.find('.events-wrapper');
+                    timelineComponents['eventsWrapper'] = timelineComponents['timelineWrapper'].children('.events');
+                    timelineComponents['fillingLine'] = timelineComponents['eventsWrapper'].children('.filling-line');
+                    timelineComponents['timelineEvents'] = timelineComponents['eventsWrapper'].find('a');
+                    timelineComponents['timelineDates'] = parseDate(timelineComponents['timelineEvents']);
+                    timelineComponents['eventsMinLapse'] = minLapse(timelineComponents['timelineDates']);
+                    timelineComponents['timelineNavigation'] = timeline.find('.cd-timeline-navigation');
+                    timelineComponents['eventsContent'] = timeline.children('.events-content');
+
+                    //assign a left postion to the single events along the timeline
+                    setDatePosition(timelineComponents, eventsMinDistance);
+                    //assign a width to the timeline
+                    var timelineTotWidth = setTimelineWidth(timelineComponents, eventsMinDistance);
+                    //the timeline has been initialize - show it
+                    timeline.addClass('loaded');
+
+                    //detect click on the next arrow
+                    timelineComponents['timelineNavigation'].on('click', '.next', function(event) {
+                        event.preventDefault();
+                        updateSlide(timelineComponents, timelineTotWidth, 'next');
+                    });
+                    //detect click on the prev arrow
+                    timelineComponents['timelineNavigation'].on('click', '.prev', function(event) {
+                        event.preventDefault();
+                        updateSlide(timelineComponents, timelineTotWidth, 'prev');
+                    });
+                    //detect click on the a single event - show new event content
+                    timelineComponents['eventsWrapper'].on('click', 'a', function(event) {
+                        event.preventDefault();
+                        timelineComponents['timelineEvents'].removeClass('selected');
+                        $(this).addClass('selected');
+                        updateOlderEvents($(this));
+                        updateFilling($(this), timelineComponents['fillingLine'], timelineTotWidth);
+                        updateVisibleContent($(this), timelineComponents['eventsContent']);
+                    });
+
+                    //on swipe, show next/prev event content
+                    timelineComponents['eventsContent'].on('swipeleft', function() {
+                        var mq = checkMQ();
+                        (mq == 'mobile') && showNewContent(timelineComponents, timelineTotWidth, 'next');
+                    });
+                    timelineComponents['eventsContent'].on('swiperight', function() {
+                        var mq = checkMQ();
+                        (mq == 'mobile') && showNewContent(timelineComponents, timelineTotWidth, 'prev');
+                    });
+
+                    //keyboard navigation
+                    $(document).keyup(function(event) {
+                        if (event.which == '37' && elementInViewport(timeline.get(0))) {
+                            showNewContent(timelineComponents, timelineTotWidth, 'prev');
+                        } else if (event.which == '39' && elementInViewport(timeline.get(0))) {
+                            showNewContent(timelineComponents, timelineTotWidth, 'next');
+                        }
+                    });
+                });
+            }
+
+            function updateSlide(timelineComponents, timelineTotWidth, string) {
+                //retrieve translateX value of timelineComponents['eventsWrapper']
+                var translateValue = getTranslateValue(timelineComponents['eventsWrapper']),
+                    wrapperWidth = Number(timelineComponents['timelineWrapper'].css('width').replace('px', ''));
+                //translate the timeline to the left('next')/right('prev')
+                (string == 'next') ?
+                translateTimeline(timelineComponents, translateValue - wrapperWidth + eventsMinDistance, wrapperWidth - timelineTotWidth): translateTimeline(timelineComponents, translateValue + wrapperWidth - eventsMinDistance);
+            }
+
+            function showNewContent(timelineComponents, timelineTotWidth, string) {
+                //go from one event to the next/previous one
+                var visibleContent = timelineComponents['eventsContent'].find('.selected'),
+                    newContent = (string == 'next') ? visibleContent.next() : visibleContent.prev();
+
+                if (newContent.length > 0) { //if there's a next/prev event - show it
+                    var selectedDate = timelineComponents['eventsWrapper'].find('.selected'),
+                        newEvent = (string == 'next') ? selectedDate.parent('li').next('li').children('a') : selectedDate.parent('li').prev('li').children('a');
+
+                    updateFilling(newEvent, timelineComponents['fillingLine'], timelineTotWidth);
+                    updateVisibleContent(newEvent, timelineComponents['eventsContent']);
+                    newEvent.addClass('selected');
+                    selectedDate.removeClass('selected');
+                    updateOlderEvents(newEvent);
+                    updateTimelinePosition(string, newEvent, timelineComponents, timelineTotWidth);
+                }
+            }
+
+            function updateTimelinePosition(string, event, timelineComponents, timelineTotWidth) {
+                //translate timeline to the left/right according to the position of the selected event
+                var eventStyle = window.getComputedStyle(event.get(0), null),
+                    eventLeft = Number(eventStyle.getPropertyValue("left").replace('px', '')),
+                    timelineWidth = Number(timelineComponents['timelineWrapper'].css('width').replace('px', '')),
+                    timelineTotWidth = Number(timelineComponents['eventsWrapper'].css('width').replace('px', ''));
+                var timelineTranslate = getTranslateValue(timelineComponents['eventsWrapper']);
+
+                if ((string == 'next' && eventLeft > timelineWidth - timelineTranslate) || (string == 'prev' && eventLeft < -timelineTranslate)) {
+                    translateTimeline(timelineComponents, -eventLeft + timelineWidth / 2, timelineWidth - timelineTotWidth);
+                }
+            }
+
+            function translateTimeline(timelineComponents, value, totWidth) {
+                var eventsWrapper = timelineComponents['eventsWrapper'].get(0);
+                value = (value > 0) ? 0 : value; //only negative translate value
+                value = (!(typeof totWidth === 'undefined') && value < totWidth) ? totWidth : value; //do not translate more than timeline width
+                setTransformValue(eventsWrapper, 'translateX', value + 'px');
+                //update navigation arrows visibility
+                (value == 0) ? timelineComponents['timelineNavigation'].find('.prev').addClass('inactive'): timelineComponents['timelineNavigation'].find('.prev').removeClass('inactive');
+                (value == totWidth) ? timelineComponents['timelineNavigation'].find('.next').addClass('inactive'): timelineComponents['timelineNavigation'].find('.next').removeClass('inactive');
+            }
+
+            function updateFilling(selectedEvent, filling, totWidth) {
+                //change .filling-line length according to the selected event
+                var eventStyle = window.getComputedStyle(selectedEvent.get(0), null),
+                    eventLeft = eventStyle.getPropertyValue("left"),
+                    eventWidth = eventStyle.getPropertyValue("width");
+                eventLeft = Number(eventLeft.replace('px', '')) + Number(eventWidth.replace('px', '')) / 2;
+                var scaleValue = eventLeft / totWidth;
+                setTransformValue(filling.get(0), 'scaleX', scaleValue);
+            }
+
+            function setDatePosition(timelineComponents, min) {
+                for (i = 0; i < timelineComponents['timelineDates'].length; i++) {
+                    var distance = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][i]),
+                        distanceNorm = Math.round(distance / timelineComponents['eventsMinLapse']) + 2;
+                    timelineComponents['timelineEvents'].eq(i).css('left', distanceNorm * min + 'px');
+                }
+            }
+
+            function setTimelineWidth(timelineComponents, width) {
+                var timeSpan = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][timelineComponents['timelineDates'].length - 1]),
+                    timeSpanNorm = timeSpan / timelineComponents['eventsMinLapse'],
+                    timeSpanNorm = Math.round(timeSpanNorm) + 4,
+                    totalWidth = timeSpanNorm * width;
+                timelineComponents['eventsWrapper'].css('width', totalWidth + 'px');
+                updateFilling(timelineComponents['timelineEvents'].eq(0), timelineComponents['fillingLine'], totalWidth);
+
+                return totalWidth;
+            }
+
+            function updateVisibleContent(event, eventsContent) {
+                var eventDate = event.data('date'),
+                    visibleContent = eventsContent.find('.selected'),
+                    selectedContent = eventsContent.find('[data-date="' + eventDate + '"]'),
+                    selectedContentHeight = selectedContent.height();
+
+                if (selectedContent.index() > visibleContent.index()) {
+                    var classEnetering = 'selected enter-right',
+                        classLeaving = 'leave-left';
+                } else {
+                    var classEnetering = 'selected enter-left',
+                        classLeaving = 'leave-right';
+                }
+
+                selectedContent.attr('class', classEnetering);
+                visibleContent.attr('class', classLeaving).one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
+                    visibleContent.removeClass('leave-right leave-left');
+                    selectedContent.removeClass('enter-left enter-right');
+                });
+                eventsContent.css('height', selectedContentHeight + 'px');
+            }
+
+            function updateOlderEvents(event) {
+                event.parent('li').prevAll('li').children('a').addClass('older-event').end().end().nextAll('li').children('a').removeClass('older-event');
+            }
+
+            function getTranslateValue(timeline) {
+                var timelineStyle = window.getComputedStyle(timeline.get(0), null),
+                    timelineTranslate = timelineStyle.getPropertyValue("-webkit-transform") ||
+                    timelineStyle.getPropertyValue("-moz-transform") ||
+                    timelineStyle.getPropertyValue("-ms-transform") ||
+                    timelineStyle.getPropertyValue("-o-transform") ||
+                    timelineStyle.getPropertyValue("transform");
+
+                if (timelineTranslate.indexOf('(') >= 0) {
+                    var timelineTranslate = timelineTranslate.split('(')[1];
+                    timelineTranslate = timelineTranslate.split(')')[0];
+                    timelineTranslate = timelineTranslate.split(',');
+                    var translateValue = timelineTranslate[4];
+                } else {
+                    var translateValue = 0;
+                }
+
+                return Number(translateValue);
+            }
+
+            function setTransformValue(element, property, value) {
+                element.style["-webkit-transform"] = property + "(" + value + ")";
+                element.style["-moz-transform"] = property + "(" + value + ")";
+                element.style["-ms-transform"] = property + "(" + value + ")";
+                element.style["-o-transform"] = property + "(" + value + ")";
+                element.style["transform"] = property + "(" + value + ")";
+            }
+
+            //based on http://stackoverflow.com/questions/542938/how-do-i-get-the-number-of-days-between-two-dates-in-javascript
+            function parseDate(events) {
+                var dateArrays = [];
+                events.each(function() {
+                    var dateComp = $(this).data('date').split('/'),
+                        newDate = new Date(dateComp[2], dateComp[1] - 1, dateComp[0]);
+                    dateArrays.push(newDate);
+                });
+                return dateArrays;
+            }
+
+            function parseDate2(events) {
+                var dateArrays = [];
+                events.each(function() {
+                    var singleDate = $(this),
+                        dateComp = singleDate.data('date').split('T');
+                    if (dateComp.length > 1) { //both DD/MM/YEAR and time are provided
+                        var dayComp = dateComp[0].split('/'),
+                            timeComp = dateComp[1].split(':');
+                    } else if (dateComp[0].indexOf(':') >= 0) { //only time is provide
+                        var dayComp = ["2000", "0", "0"],
+                            timeComp = dateComp[0].split(':');
+                    } else { //only DD/MM/YEAR
+                        var dayComp = dateComp[0].split('/'),
+                            timeComp = ["0", "0"];
+                    }
+                    var newDate = new Date(dayComp[2], dayComp[1] - 1, dayComp[0], timeComp[0], timeComp[1]);
+                    dateArrays.push(newDate);
+                });
+                return dateArrays;
+            }
+
+            function daydiff(first, second) {
+                return Math.round((second - first));
+            }
+
+            function minLapse(dates) {
+                //determine the minimum distance among events
+                var dateDistances = [];
+                for (i = 1; i < dates.length; i++) {
+                    var distance = daydiff(dates[i - 1], dates[i]);
+                    dateDistances.push(distance);
+                }
+                return Math.min.apply(null, dateDistances);
+            }
+
+            /*
+              How to tell if a DOM element is visible in the current viewport?
+              http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+            */
+            function elementInViewport(el) {
+                var top = el.offsetTop;
+                var left = el.offsetLeft;
+                var width = el.offsetWidth;
+                var height = el.offsetHeight;
+
+                while (el.offsetParent) {
+                    el = el.offsetParent;
+                    top += el.offsetTop;
+                    left += el.offsetLeft;
+                }
+
+                return (
+                    top < (window.pageYOffset + window.innerHeight) &&
+                    left < (window.pageXOffset + window.innerWidth) &&
+                    (top + height) > window.pageYOffset &&
+                    (left + width) > window.pageXOffset
+                );
+            }
+
+            function checkMQ() {
+                //check if mobile or desktop device
+                return window.getComputedStyle(document.querySelector('.cd-horizontal-timeline'), '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "");
+            }
+        });
+
+        // google tra
+    </script>
+</body>
+
+</html>
